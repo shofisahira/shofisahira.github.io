@@ -1,0 +1,130 @@
+/* NAVIGATION BAR */
+
+.nav {
+    box-sizing: border-box;
+    padding: 20px 20px;
+    width: 100%;
+    height: 70px;
+    background-color: #679B9B;
+    z-index: 999;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    font-size: 16px;
+    transition: 0.5s ease-in-out;
+}
+
+li, ul {
+    text-decoration: none;
+    list-style: none;
+    padding-inline-start: 0;
+}
+
+.nav .nav-list a{
+    margin-right: 6px;
+    margin-left: 6px;
+    color: white;
+}
+
+.nav .nav-brand img{
+    box-shadow: grey;
+}
+
+/* HAMBURGER MENU */
+.menu-hamburger {
+    margin-left: 16px;
+    margin-right: 6px;
+    cursor: pointer;
+    float: right;
+}
+.bar1, .bar2, .bar3 {
+    width: 16px;
+    height: 3px;
+    border-radius: 3px;
+    background-color: #fff;
+    margin: 3px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    /*-webkit-transform: rotate(-45deg) translate(0px, -8px);*/
+    transform: rotate(-45deg) translate(-4px, 4px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-4px, -4px);
+    transform: rotate(45deg) translate(-4px, -4px);
+}
+
+/* MENU ITEMS */
+
+.nav-menu{
+    display: none;
+    position: absolute;
+    right: 0px;
+    text-align: center;
+    top: 70px;
+    margin: 0;
+    flex-direction: column;
+    background-color: azure;
+    align-items: center;
+}
+
+.dropdown-toggler:hover .dropdown-menu {
+    display: flex;
+}
+
+.dropdown-menu{
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    margin: 0;
+    right: 0;
+    padding-top: 70px;
+    z-index: 0;
+    align-items: end;
+}
+
+.dropdown-toggler{
+    display: inline;
+    margin-right: 6px;
+    margin-left: 6px;
+}
+
+
+.menu-item {
+    width: 200px;
+    text-align: center;
+    padding: 10px;
+    background-color: azure;
+}
+
+.menu-item:hover{
+    cursor: pointer;
+    background-color: white;
+    transition: all 0.5s ease-in-out;
+}
+
+.transparent {
+    background-color: rgba(0,0,0,0) !important;
+    box-shadow: none;
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 768px){
+    #menu-list {
+        width: 100%;
+        transition: all 1.5s ease-in-out;
+    }
+    .nav-brand {
+        width: 50px;
+    }
+    .nav-list {
+        font-size: 12px;
+        line-height: 10px;
+    }
+}

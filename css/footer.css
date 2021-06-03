@@ -1,0 +1,36 @@
+footer {
+    background-image: linear-gradient(white, #679B9B);
+    padding: 40px 80px;
+}
+
+footer a {
+    margin: 10px !important;
+    font-size: 16px;
+}
+
+@media screen and (max-width: 768px){
+    footer {
+        padding: 0;
+    }
+    footer a {
+        margin: 10px 0 !important;
+        width: 100% !important;
+        font-size: 12px;
+    }
+
+    footer img{
+        width: 50%;
+    }
+    footer .row {
+        display: flex;
+        flex-direction: column;
+        align-content: space-between;
+    }
+
+    footer .row div {
+        display: flex;
+        align-content: space-between;
+        text-align: center;
+        justify-content: center;
+    }
+}
